@@ -4,7 +4,7 @@ order: 1
 ---
 
 
-![Desktop View](assets\gif\196830.gif){: width="900" height="400" }
+![Desktop View](assets/gif/196830.gif){: width="900" height="400" }
 
 # Hello!
 Welcome to my personal space, my name is Ahmed, and here is where I share my interests, and thoughts, or at least the ones I am comfortable sharing.

@@ -5,7 +5,7 @@ date: 2025-04-10
 categories: [Mathematics, proof theory]
 tags: [math]     # TAG names should always be lowercase
 image:
-  path: assets\posts-covers\dominos-cropped.png
+  path: assets/posts-covers/dominos-cropped.png
 ---
 
 **Mathematical induction** is a method for **proving** that a statement $$P(n)$$ is true for every **Natural number** $$n$$, that is, that the infinitely many cases $$P(0),P(1),P(2),P(3),\dots$$ all hold. This is done by first proving a simple case, then also showing that if we assume the claim is true for a given case, then the next case is also true.
