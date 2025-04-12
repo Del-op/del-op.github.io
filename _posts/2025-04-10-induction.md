@@ -2,7 +2,7 @@
 math: true
 title: Induction
 date: 2025-04-10
-categories: [Mathematics, proof theory]
+categories: [Mathematics, Proof theory]
 tags: [math]     # TAG names should always be lowercase
 image:
   path: assets/posts-covers/dominos-cropped.png
