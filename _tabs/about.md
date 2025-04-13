@@ -9,4 +9,5 @@ order: 1
 # Hello!
 Welcome to my personal space. This is where I share thoughts and ideas mostly related to math, logic, physics, and computation. Occasionally, something less formal sneaks in.
 
+- My study notes can be found in the [notes](/notes) section.
 - Feel free to reach out if you have questions or just want to say hi.
