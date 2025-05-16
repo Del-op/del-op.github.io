@@ -74,7 +74,7 @@ int main()
 
 ---
 
-## Use cases
+## Use Cases
 
 ```c
 int denom;
@@ -89,7 +89,7 @@ if (denom != 0 && num / denom == a)
 
 ---
 
-## Possible problems
+## Possible Problems
 
 ```c
 if (expressionA && myfunc(b)) 
@@ -111,7 +111,7 @@ If `myfunc(b)` is supposed to perform some required operation, and `expressionA`
 
 ---
 
-## Possible fix
+## Possible Fix
 
 ```c
 bool result = myfunc(b);  // Ensure it's called

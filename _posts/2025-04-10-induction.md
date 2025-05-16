@@ -24,7 +24,7 @@ A **proof by induction** consists of two cases. The first, the **base case**, pr
 Despite its name, mathematical induction differs fundamentally from [inductive reasoning](https://en.wikipedia.org/wiki/Inductive_reasoning){:target="_blank"} as [used in philosophy](https://en.wikipedia.org/wiki/Problem_of_induction "Problem of induction"){:target="_blank"}, in which the examination of many cases results in a probable conclusion. The mathematical method examines infinitely many cases to prove a general statement, but it does so by a finite chain of [deductive reasoning](https://en.wikipedia.org/wiki/Deductive_reasoning){:target="_blank"} involving the variable $$n$$, which can take infinitely many values. The result is a rigorous proof of the statement, not an assertion of its probability.
 
 
-## proof steps:
+## proof Steps:
 
 1. The **base case** (or **initial case**): prove that the statement holds for 0, or 1 (or any fixed natural number $$N$$).
 2. The **induction step** (or **inductive step**, or **step case**): prove that for every $$n$$, if the statement holds for $$n$$, then it holds for $$n+1$$. In other words, assume that the statement holds for some arbitrary natural number $$n$$, and prove that the statement holds for $$n+1$$.
