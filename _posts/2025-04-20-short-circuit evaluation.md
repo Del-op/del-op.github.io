@@ -1,5 +1,5 @@
 ---
-title: Short-circuit evaluation
+title: Short-Circuit Evaluation
 date: 2025-04-20
 categories: [Computer Science]
 tags: [cs]     # TAG names should always be lowercase

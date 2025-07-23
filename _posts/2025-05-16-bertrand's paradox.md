@@ -7,7 +7,7 @@ image:
   path: assets/posts-covers/Bertrand2-chords.svg.png
 ---
 
-Reaching infinity can be approached through many different paths. In the context of Bertrand’s Paradox, the path you choose to reach infinity determines the resulting probability distribution.
+Infinity can be approached through many different paths. In the context of Bertrand’s Paradox, the path you choose to reach infinity determines the resulting probability distribution.
 
 What remains uncertain is whether nature inherently favors a particular path, implying a fundamental or "natural" distribution of outcomes, or whether the path is a matter of choice, with multiple valid approaches leading to the same destination.
 
