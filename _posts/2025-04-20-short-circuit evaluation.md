@@ -29,7 +29,7 @@ image:
    Avoids unnecessary computation (especially if the second operand is expensive to compute).
 
 2. **Safety**  
-   Prevents runtime errors by guarding expressions—for example, checking for `null` before accessing a property.
+   Prevents runtime errors by guarding expressions, for example, checking for `null` before accessing a property.
 
 3. **Control Flow**  
    Can be used to execute conditional side-effects in many languages.
@@ -111,7 +111,7 @@ If `myfunc(b)` is supposed to perform some required operation, and `expressionA`
 
 ---
 
-## Possible Fix
+## Suggested Fix
 
 ```c
 bool result = myfunc(b);  // Ensure it's called
@@ -122,4 +122,4 @@ if (expressionA && result)
 }
 ```
 
-This ensures that `myfunc(b)` is always called while still participating in the conditional check.  
+This ensures that `myfunc(b)` is always called while still participating in the conditional check.
