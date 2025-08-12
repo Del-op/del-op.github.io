@@ -11,5 +11,4 @@ Welcome to my personal space. This is where I share thoughts and ideas mostly re
 Some posts are primarily to educate myself about a topic, don’t assume that I know what I’m talking about!
 
 - My study notes can be found in the [notes](/notes) section.
-- Feel free to reach out if you have questions or just want to say hi.
-
+- Feel free to reach out on <span class="discord-id">Discord</span> — <span class="discord-id">@ahmed70</span>, I'm usually active there.
