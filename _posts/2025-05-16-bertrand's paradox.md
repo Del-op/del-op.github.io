@@ -1,8 +1,8 @@
 ---
 title: Bertrand's Paradox
 date: 2025-05-16
-categories: [Mathematics, paradoxes]
-tags: [math]     # TAG names should always be lowercase
+categories: [Mathematics, Paradoxes]
+tags: [paradox]     # TAG names should always be lowercase
 image:
   path: assets/posts-covers/Bertrand2-chords.svg.png
 ---
