@@ -1,32 +1,32 @@
 ---
 title: Short-Circuit Evaluation
 date: 2025-04-20
-categories: [Computer Science]
+categories: [Computer Science, Computation]
 tags: [cs]     # TAG names should always be lowercase
 image:
   path: assets/posts-covers/Short-Circuit Evaluation-3.png
 ---
 
-**Short-circuit evaluation** is a programming language feature where the second part of the logical expression is **not evaluated** if the result can already be determined from the first part.
+**Short-circuit evaluation** is a programming language feature where the second argument of the logical expression is **not evaluated** if the result can already be determined from the first argument.
 
 ---
 
 ## Logical Operators
 
 - **Logical AND (`&&` or `and`)**  
-  Evaluates to `true` if **both** operands are true.  
-    - If the first operand is false, the overall result must be false, so the second operand is `not` evaluated.
+  Evaluates to `true` if **both** arguments are true.
+    - If the first argument is false, the overall result must be false, so the second argument is `not` evaluated.
 
 - **Logical OR (`||` or `or`)**  
-  Evaluates to `true` if **either** operand is true.  
-    - If the first operand is true, the overall result is already true, so the second operand is `not` evaluated.
+  Evaluates to `true` if **either** arguments is true.  
+    - If the first argument is true, the overall result is already true, so the second argument is `not` evaluated.
 
 ---
 
 ## Why It Matters
 
 1. **Performance**  
-   Avoids unnecessary computation (especially if the second operand is expensive to compute).
+   Avoids unnecessary computation (especially if the second argument is expensive to compute).
 
 2. **Safety**  
    Prevents runtime errors by guarding expressions, for example, checking for `null` before accessing a property.
