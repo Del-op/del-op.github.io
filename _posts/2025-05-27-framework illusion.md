@@ -3,7 +3,7 @@ math: true
 title: Framework Illusion
 date: 2025-05-27
 categories: [Philosophy, Philosophy of Science]
-tags: [frameworks, reality, epistemology]     # TAG names should always be lowercase
+tags: [framework, reality, epistemology]     # TAG names should always be lowercase
 image:
   path: assets/posts-covers/Framework Illusion.png
 ---

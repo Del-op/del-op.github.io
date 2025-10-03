@@ -3,14 +3,14 @@ math: true
 title: When Order Looks Random
 date: 2025-09-19
 categories: [Mathematics, Information theory]
-tags: [randomness, patterns, complexity]     # TAG names should always be lowercase
+tags: [randomness, pattern, complexity]     # TAG names should always be lowercase
 image:
   path: assets/posts-covers/When Order Looks Random.png
 ---
 
 I’ve been thinking about randomness and patterns, and I don’t fully agree with the idea that patterns are universal and obvious to any mind. For us humans, something like:<br>
 `1, 2, 3, 4, 5, 1, 2, 3, 4, 5, …`<br>
-is very obviously a pattern. It feels simple and intuitive because we can decode it as “just add one each time, then repeat the partial pattern”. But that’s our way of decoding. It’s easy for us because our way of thinking includes counting, addition, and repetition as natural tools.
+is very obviously a pattern. It feels simple and intuitive because we can decode it as “start from 1, increment by 1 each step up to 5, and repeat”. But that’s our way of decoding. It’s easy for us because our way of thinking includes counting, addition, and repetition as natural tools.
 
 But this doesn't have to be universal. Maybe another kind of mind doesn’t have “+1” as a basic operation. For them, the sequence might not look like a pattern at all. On the other hand, something that feels completely random to us could be perfectly ordered for them if they had a different kind of decoding that matches it. So what looks like randomness to us might look like order to them, and what looks like order to us might look like randomness to them.
 

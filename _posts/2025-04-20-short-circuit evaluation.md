@@ -80,12 +80,10 @@ int main()
 int denom;
 if (denom != 0 && num / denom == a)
 {
-    // ...
-    // Prevents division by zero:
-    // If 'denom' is 0, the first condition fails, so 'num / denom' is never evaluated.
-    // This avoids a potential runtime error.
+    do_something();
 }
 ```
+Prevents division by zero: If `denom` is 0, the first condition fails, so `num / denom` is never evaluated. This avoids a potential runtime error.
 
 ---
 
