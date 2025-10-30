@@ -33,4 +33,4 @@ The hypothesis in the induction step, that the statement holds for a particular 
 
 # References
 
-[Mathematical induction Wikipedia](https://en.wikipedia.org/wiki/Mathematical_induction){:target="_blank"}
+- [Mathematical induction Wikipedia](https://en.wikipedia.org/wiki/Mathematical_induction){:target="_blank"}
