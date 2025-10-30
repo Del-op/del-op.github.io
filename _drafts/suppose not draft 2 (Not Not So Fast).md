@@ -5,7 +5,7 @@ date: 2025-10-27
 categories: [Mathematics, Proof theory]
 tags: [logic, concreteness, contradiction]     # TAG names should always be lowercase
 image:
-  path: assets/img/Lightning bolt.png
+  path: assets/posts-covers/Lightning bolt - B&W.png
 ---
 
 --> alternative post title: "Not Not So Fast"
