@@ -75,3 +75,8 @@
   visibility: visible;
   transition: opacity 180ms ease;
 }
+
+/* Hide the centered title on mobile completely */
+#topbar-title {
+  display: none !important;
+}

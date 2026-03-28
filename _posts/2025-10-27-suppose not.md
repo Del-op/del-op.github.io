@@ -33,7 +33,7 @@ $$
 
 $$
 
-If assuming that a statement $$\neg S$$ is true leads to a contradiction $$\bot$$, then we conclude that $$S$$ must be true. This inference is a logical principle (DNE), accepted in classical logic but not in all systems. It is grounded in the **logical principles**[^1]we adopt. In particular, classical logic validates:
+If assuming that a statement $$\neg S$$ is true leads to a contradiction $$\bot$$, then we conclude that $$S$$ must be true. This inference is a logical principle, accepted in classical logic but not in all systems. It is grounded in the **logical principles**[^1]we adopt. In particular, classical logic validates:
 
 1. The **law of non-contradiction (LNC)**:  (derivable intuitionistically)
 

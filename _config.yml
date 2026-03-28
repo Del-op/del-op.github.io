@@ -20,7 +20,7 @@ tagline: Del-op # it will display as the subtitle
 
 ## changed the site description
 description: >- # used by seo meta and the atom feed
-  Personal blog on math, logic, physics, and computation, with notes on low-level programming, hardware design, and verification.
+  Personal blog on math, logic, and computation.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
