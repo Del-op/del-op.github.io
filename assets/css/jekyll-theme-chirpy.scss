@@ -80,3 +80,53 @@
 #topbar-title {
   display: none !important;
 }
+
+
+/* Color the Spotify icon green */
+.fa-spotify {
+  color: #1DB954 !important;
+}
+
+/*  Make it slightly brighter on hover */
+.fa-spotify:hover {
+  color: #1ED760 !important;
+  text-decoration: none;
+}
+
+
+/* --- GitHub Icon (Theme Sensitive) --- */
+/* 1. Default color (Light Mode) */
+.fa-github {
+  color: #24292e !important; /* Dark Gray */
+}
+
+/* 2. Color for Dark Mode */
+html[data-mode="dark"] .fa-github {
+  color: #f0f6fc !important; /* Off-white / GitHub's Light Gray */
+}
+
+/* 3. Hover (Works for both) */
+.fa-github:hover {
+  color: #4078c0 !important; /* GitHub Blue */
+}
+
+
+/* --- X (Twitter) --- */
+/* 1. Light Mode: Stark Black */
+.fa-x-twitter, .fa-twitter {
+  color: #000000 !important; 
+}
+
+/* 2. Dark Mode: Pure White */
+html[data-mode="dark"] .fa-x-twitter, 
+html[data-mode="dark"] .fa-twitter {
+  color: #ffffff !important; 
+}
+
+/* 3. Hover: Subtle Fade */
+/* Note: Since pure black/white can't be "brightened," 
+   we use opacity for a modern interactive feel */
+.fa-x-twitter:hover, .fa-twitter:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
