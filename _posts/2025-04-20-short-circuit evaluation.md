@@ -2,7 +2,7 @@
 title: Short-Circuit Evaluation
 date: 2025-04-20
 categories: [Computer Science, Computation]
-tags: [cs]     # TAG names should always be lowercase
+tags: [minimal evaluation]     # TAG names should always be lowercase
 image:
   path: assets/posts-covers/Short-Circuit Evaluation-3.png
 ---
