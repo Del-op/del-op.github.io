@@ -21,37 +21,13 @@ Python has two pairs of operators that can look similar:
 
 The important difference in evaluation is:
 
-`and` and `or` **short-circuit**: Python may skip the right-hand expression when the result can already be determined from the left-hand operand.
+Logical operators (`and`, `or`) have **short-circuit** behavior. Python may skip the right-hand expression when the result can already be determined from the left-hand operand.
 
-`&` and `|`, like ordinary binary operators in Python, evaluate **both operand expressions before the operator is applied**.
+Bitwise operators (`&`, `|`), like ordinary binary operators in Python, evaluate **both operand expressions before the operator is applied**.
 
 ---
 
 ## Short-Circuit Evaluation
-
-```python
-def check():
-    print("called")
-    return True
-
-False and check()
-True or check()
-```
-
-`check()` is never called.
-
-This is useful for safe conditions:
-
-```python
-obj = None
-
-if obj is not None and obj.value > 10:
-    print("Success")
-```
-
-If `obj` is `None`, Python skips the second expression and avoids an error.
-
----
 
 `and` and `or` are special language-level expressions whose semantics determine whether the right-hand expression is evaluated at all.
 
@@ -95,10 +71,10 @@ For example:
 
 ```python
 "hello" and 42
-# 42
+# returns 42
 
 "" or "fallback"
-# "fallback"
+# returns "fallback"
 ```
 
 They return one of their operands.
@@ -113,7 +89,7 @@ They return one of their operands.
 12 & 25  # 8
 ```
 
-For example:
+More clearly:
 
 ```text
   01100   # 12
@@ -142,10 +118,10 @@ def second():
     print("second")
     return True
 
-first() or second()
+first() or second()  # short-circuit
 # first
 
-first() | second()
+first() | second()  # eager evaluation
 # first
 # second
 ```
@@ -162,9 +138,9 @@ first() | second()
 
 This is an example of **eager operand evaluation**: both operand expressions are evaluated before the operator is applied.
 
-Python's `&` and `|` are fundamentally bitwise operator forms, but **being bitwise is not what makes them eager**; their eager operand evaluation follows from Python's general semantics for ordinary binary expressions.
+`&` and `|` are bitwise operators, but being bitwise is not what makes their evaluation eager. They follow Python’s ordinary evaluation rules for binary expressions.
 
-Some languages expose eager and short-circuit logical operations separately. Ada is one example.[^1]
+Some languages expose eager evaluation directly through logical operators. Ada is one example.[^1]
 
 ---
 
@@ -196,23 +172,26 @@ Suppose `a` is a NumPy array:
 
 Each comparison first produces an array of Boolean values.
 
-Conceptually:
+Since `a` is an array, conceptually:
 
 ```text
-a > 0
-    |
-    v
-[True, False, True, ...]
+a > 0    -->    [True, False, True, ...]
 
-a < 10
-    |
-    v
-[True, True, False, ...]
+a < 10   -->    [True, True, False, ...]
 ```
 
 Then NumPy overloads `&` to combine those arrays element by element.
 
+```text
+  [True, False, True, ...]  # a > 0
+& [True, True, False, ...]  # a < 10
+----------------------------
+  [True, False, False, ...]
+```
+
 This works because `&` is an overloadable operator.
+
+> Operator overloading changes what an operator means for particular operand types.
 
 By contrast:
 
@@ -224,71 +203,17 @@ does not mean element-wise conjunction.
 
 Python's `and` first asks for the truth value of the entire left-hand object.
 
-For a multi-element NumPy array, that truth value is ambiguous: should the array count as true if every element is true, or if at least one element is true?
-
-NumPy therefore rejects that interpretation rather than guessing.
-
-This reveals an important distinction:
-
-```text
-and
-    short-circuiting
-    special language-level expression
-    operates on the truthiness of whole objects
-    not overloadable
-
-&
-    eager operand evaluation
-    ordinary overloadable operator
-    can be given element-wise semantics by libraries
-```
+For a multi-element NumPy array, that truth would be ambiguous. NumPy therefore refuses to supply a single truth value.
 
 The same principle applies to pandas Boolean masks.
 
-### A Consequence of Eager Operand Evaluation
-
-One observable consequence is that both expressions are evaluated regardless of the first result.
-
-```python
-def check_a():
-    print("A checked")
-    return False
-
-def check_b():
-    print("B checked")
-    return True
-
-result = check_a() & check_b()
-```
-
-Output:
-
-```text
-A checked
-B checked
-```
-
-With short-circuit evaluation:
-
-```python
-result = check_a() and check_b()
-```
-
-Output:
-
-```text
-A checked
-```
-
-`check_b()` would never run because `check_a()` returned `False`.
-
----
+### Clear Intent
 
 If both operations must happen independently, make that intention explicit:
 
 ```python
-a = check_a()
-b = check_b()
+a = first()
+b = second()
 
 result = a and b
 ```
@@ -321,11 +246,11 @@ Most importantly:
 
 > `and` and `or` are special language constructs whose evaluation semantics allow short-circuiting.
 
-That distinction between **operator meaning**, **operator overloading**, and **evaluation strategy** is the important computer-science idea underneath the syntax.
+That distinction between **operator meaning**, **operator overloading**, and **evaluation strategy** is the important idea underneath the syntax.
 
 ---
 
-[^1]: **Ada provides a clear example of eager versus short-circuit logical evaluation.** Its regular logical operators, `and` and `or`, evaluate both operands, while `and then` and `or else` are the short-circuit forms:
+[^1]: **Ada provides a clear example of eager versus short-circuit logical evaluation.** Its logical operators `and` and `or` evaluate both operands, while `and then` and `or else` provide short-circuit evaluation:
 
     ```ada
     A and B          -- both operands are evaluated
@@ -335,5 +260,5 @@ That distinction between **operator meaning**, **operator overloading**, and **e
     A or else B      -- B is evaluated only if A is False
     ```
 
-    This demonstrates that the logical operation being represented and the strategy used to evaluate its operands are separate language-design decisions.
+    This makes the distinction between eager and short-circuit evaluation explicit at the level of logical operations.
 

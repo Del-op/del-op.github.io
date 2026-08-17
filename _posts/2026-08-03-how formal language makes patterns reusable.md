@@ -18,7 +18,7 @@ I have two thoughts in mind:
 
 These two thoughts become more precise once we distinguish an abstract structure, a formal expression, and an interpretation of that expression.
 
-## From Concrete Events to Abstract Form
+## Concrete Events & Abstract Forms
 
 Suppose someone combines two oranges with three oranges and counts five oranges. Somewhere else, someone combines five apples with four apples and counts nine apples.
 
@@ -27,9 +27,9 @@ As physical events, these situations are different. They involve different objec
 $$
 \text{size of the combined collection}
 =
-\text{first size}
+\text{size of first}
 +
-\text{second size}.
+\text{size of second}.
 $$
 
 Treating both events as instances of this pattern is an act of abstraction. We disregard the kind, color, weight, location, and other features of the objects while preserving their cardinality and the way the collections are combined.
@@ -40,11 +40,9 @@ $$
 c = m+n.
 $$
 
-The variables do not belong to oranges, apples, or any particular object. They provide reusable positions within a pattern that can be instantiated by many different situations.
+The variables do not belong to oranges, apples, or any particular object. They provide reusable positions within a pattern that can be instantiated by many different events.
 
-Abstraction identifies a common structure relative to chosen criteria of relevance.
-
-There is also a hidden abstraction in the fruit example. Physical combination behaves like addition only under certain assumptions:
+But there are also hidden assumptions in the previous example for the abstraction to work:
 
 - the collections are disjoint;
 - no object appears or disappears;
@@ -58,7 +56,7 @@ The physical act of “putting together” is therefore not intrinsically additi
 The process is better represented as:
 
 $$
-\text{concrete situation}
+\text{concrete event}
 \xrightarrow{\text{abstraction}}
 \text{mathematical structure}
 \xrightarrow{\text{representation}}
@@ -67,7 +65,7 @@ $$
 
 This also explains how abstraction compresses experience. Instead of storing every event independently, we represent a general type and treat particular events as its instances.
 
-But this compression can be misleading. Abstraction gives us power precisely because it discards information; that is also why abstraction can fail.
+But this compression can be misleading. Abstraction gives us power precisely because it discards information; that is also why abstraction can fail us if used carelessly.
 
 ## Syntax and Semantics Are Not One-to-One
 
@@ -83,13 +81,13 @@ $$
 
 have different visible forms, but they may represent the same operation and yield the same result when their variables receive the same values.
 
-Shared notation is therefore not required for shared mathematical content.
+Shared mathematical content therefore does not require shared notation.
 
-A formal language consists of a vocabulary together with syntactic rules that determine which combinations of symbols are well formed.
+That was an example of having different expressions, but the same interpretation.
 
-Semantics concerns what an expression means under an interpretation.
+The opposite can happen too. The same expression can receive different interpretations.
 
-The same expression can receive different interpretations. In ordinary arithmetic,
+In ordinary arithmetic,
 
 $$
 2+3=5.
@@ -98,7 +96,10 @@ $$
 In arithmetic modulo $$4$$,
 
 $$
-2+3\equiv 1 \pmod 4.
+\begin{aligned}
+2+3 &= 5 \\
+    &\equiv 1 \pmod 4.
+\end{aligned}
 $$
 
 The expression does not carry one complete meaning by itself. Its interpretation depends on the structure in which it is evaluated.

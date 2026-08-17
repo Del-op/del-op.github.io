@@ -1,6 +1,6 @@
 # About
 
-Personal blog on math, logic, physics, and computation, with notes on courses and subjects I find interesting.
+Personal blog on math, logic, physics, and computation, with notes on subjects I find interesting.
 
 **URL:** [https://del-op.github.io](https://del-op.github.io)
 
